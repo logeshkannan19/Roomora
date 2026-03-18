@@ -1,29 +1,72 @@
-# Roomora - Modern Room Rental Discovery Platform
+# Roomora - Premium Room Rental Discovery Platform
 
-A premium room rental discovery platform built with Next.js 14, TypeScript, Tailwind CSS, and shadcn/ui.
+![Roomora Banner](https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200)
 
-![Roomora](https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200)
+> A modern, production-ready room rental discovery platform with a premium Apple-inspired design.
+
+## 🚀 Overview
+
+Roomora is a sophisticated room rental platform designed for the UAE market. It features a clean, Apple-inspired UI with smooth animations, advanced filtering capabilities, and a delightful user experience. Built with modern web technologies and best practices.
+
+**Live Demo**: [roomora.vercel.app](https://roomora.vercel.app)
 
 ## ✨ Features
 
-- 🏠 Beautiful landing page with hero section
-- 🔍 Advanced filtering system (location, price, room type)
-- 🧾 Responsive room listings grid
-- 📄 Detailed room pages with image galleries
-- ❤️ Favorites system with localStorage persistence
-- 🌙 Dark mode support
-- 🔎 Search with auto-suggestions
-- 📱 Fully responsive design
-- ⚡ Smooth animations and transitions
-- 💫 Skeleton loaders and toast notifications
+| Feature | Description |
+|---------|-------------|
+| 🏠 **Hero Landing** | Stunning hero section with animated search and statistics |
+| 🔍 **Smart Filters** | Filter by location, price range, and room type |
+| 📱 **Responsive Grid** | Beautiful card layout adapts to all screen sizes |
+| 📄 **Room Details** | Full gallery, amenities, and booking actions |
+| ❤️ **Favorites** | Save rooms locally with persistent storage |
+| 🌙 **Dark Mode** | Eye-friendly dark theme with smooth transitions |
+| 🔎 **Auto-Suggest** | Smart search with location suggestions |
+| ⚡ **Animations** | Framer Motion powered smooth transitions |
+| 💫 **Loading States** | Skeleton loaders for premium UX |
 
 ## 🛠 Tech Stack
 
-- **Frontend**: Next.js 14 (App Router) + TypeScript
-- **Styling**: Tailwind CSS + shadcn/ui
-- **State**: Zustand
-- **Icons**: Lucide React
-- **Animations**: Framer Motion
+| Category | Technology |
+|----------|------------|
+| **Framework** | Next.js 14 (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS + shadcn/ui |
+| **State** | Zustand |
+| **Icons** | Lucide React |
+| **Animation** | Framer Motion |
+| **UI Components** | Radix UI |
+
+## 📁 Project Structure
+
+```
+roomora/
+├── app/                        # Next.js App Router
+│   ├── api/rooms/[id]/        # API routes
+│   ├── favorites/              # Favorites page
+│   ├── layout.tsx             # Root layout
+│   ├── page.tsx               # Landing page
+│   └── globals.css            # Global styles
+├── components/
+│   ├── ui/                    # shadcn/ui components
+│   ├── Header.tsx             # Navigation header
+│   ├── Hero.tsx               # Hero section
+│   ├── Footer.tsx             # Footer
+│   ├── RoomCard.tsx           # Room card component
+│   ├── RoomListings.tsx       # Room grid with filters
+│   ├── Filters.tsx            # Filter controls
+│   ├── SearchBar.tsx          # Search with suggestions
+│   ├── FeaturedRooms.tsx      # Featured listings
+│   ├── FavoritesButton.tsx    # Heart/favorite toggle
+│   └── ThemeProvider.tsx      # Theme context
+├── lib/
+│   ├── mockData.ts            # 18 premium room listings
+│   ├── store.ts               # Zustand state management
+│   └── utils.ts               # Utility functions
+├── hooks/
+│   └── useDebounce.ts        # Debounce hook
+├── next.config.js             # Next.js configuration
+└── tsconfig.json              # TypeScript configuration
+```
 
 ## 🚀 Getting Started
 
@@ -31,119 +74,146 @@ A premium room rental discovery platform built with Next.js 14, TypeScript, Tail
 
 - Node.js 18+ 
 - npm or yarn
+- Git
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd roomora
+git clone https://github.com/logeshkannan19/Roomora.git
+cd Roomora
 
 # Install dependencies
 npm install
 
-# Initialize shadcn/ui
-npx shadcn-ui@latest init
-
-# Start the development server
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+### Environment Variables
 
-## 📁 Project Structure
+Create a `.env.local` file if needed:
 
-```
-roomora/
-├── app/                    # Next.js app router
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Landing page
-│   ├── rooms/
-│   │   ├── page.tsx       # Room listings
-│   │   └── [id]/
-│   │       └── page.tsx   # Room details
-│   └── favorites/
-│       └── page.tsx       # Favorites page
-├── components/            # React components
-│   ├── ui/               # shadcn/ui components
-│   ├── Header.tsx
-│   ├── Footer.tsx
-│   ├── RoomCard.tsx
-│   ├── Filters.tsx
-│   ├── SearchBar.tsx
-│   └── ...
-├── lib/                   # Utilities & mock data
-│   ├── utils.ts
-│   ├── mockData.ts
-│   └── store.ts          # Zustand store
-└── public/               # Static assets
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
 ```
 
 ## 🎨 Design System
 
-### Colors
-- Primary: Emerald/Green tones
-- Background: Clean whites with dark mode support
-- Accents: Warm oranges and soft grays
+### Color Palette
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Primary | `#10B981` | CTAs, links, highlights |
+| Primary Dark | `#059669` | Hover states |
+| Background Light | `#FFFFFF` | Light mode background |
+| Background Dark | `#020617` | Dark mode background |
+| Text | `#0F172A` | Primary text |
+| Muted | `#64748B` | Secondary text |
 
 ### Typography
-- Clean, modern sans-serif
-- Clear hierarchy with proper spacing
+
+- **Font Family**: Inter (Google Fonts)
+- **Headings**: Bold, large size
+- **Body**: Regular, optimized line height
+- **Code**: JetBrains Mono
 
 ### Components
-- Rounded corners (2xl radius)
-- Soft shadows
-- Smooth transitions (300ms)
-- Premium, Apple-inspired aesthetic
 
-## 📱 Responsive Breakpoints
+- **Cards**: Rounded-xl (16px radius), soft shadows
+- **Buttons**: Rounded-xl, multiple variants
+- **Inputs**: Clean, minimal borders
+- **Transitions**: 300ms ease-out
 
-- Mobile: < 640px
-- Tablet: 640px - 1024px
-- Desktop: > 1024px
+## 📱 Responsive Design
 
-## 🔄 API Routes
+| Breakpoint | Columns | Description |
+|------------|---------|-------------|
+| < 640px | 1 | Mobile phones |
+| 640px+ | 2 | Tablets |
+| 768px+ | 3 | Small laptops |
+| 1024px+ | 3-4 | Desktops |
+| 1280px+ | 4 | Large screens |
 
-The project uses static mock data, but is structured for easy backend integration:
+## 🔌 API Reference
 
-- `GET /api/rooms` - Fetch all rooms
-- `GET /api/rooms/[id]` - Fetch single room
-- `GET /api/rooms?location=X&price=Y&type=Z` - Filter rooms
+The API routes are structured for easy backend integration:
+
+### GET /api/rooms/[id]
+
+Fetch a single room by ID.
+
+**Response:**
+```json
+{
+  "id": "1",
+  "title": "Modern Marina Studio",
+  "location": "Dubai Marina",
+  "price": 2500,
+  "rating": 4.9,
+  "type": "Studio",
+  "amenities": ["WiFi", "AC", "Pool"],
+  "images": ["url1", "url2"],
+  "description": "...",
+  "availableNow": true
+}
+```
 
 ## 📦 Mock Data
 
-The app includes 15-20 pre-configured rooms with:
-- Realistic titles and descriptions
-- Various locations (Dubai, Abu Dhabi, etc.)
-- Price range: $500 - $3,000/month
-- Ratings: 4.0 - 5.0 stars
-- High-quality Unsplash images
-- Complete amenity lists
+The platform includes 18 premium room listings across:
 
-## 🌙 Dark Mode
+- Dubai Marina, Downtown Dubai, Palm Jumeirah
+- Abu Dhabi Corniche, Al Reem Island
+- Sharjah, Ajman, Ras Al Khaimah, Fujairah
+- DIFC, Business Bay, JBR, and more
 
-Toggle between light and dark themes with a single click. The theme preference is saved to localStorage.
+## 🔮 Future Roadmap
 
-## 💾 Data Persistence
+- [ ] User authentication (NextAuth.js)
+- [ ] Database integration (PostgreSQL/Supabase)
+- [ ] Real-time chat with hosts
+- [ ] Booking system with payments
+- [ ] User reviews and ratings
+- [ ] Push notifications
+- [ ] PWA support
+- [ ] Advanced analytics
 
-- Favorites are stored in localStorage
-- Theme preference is persisted
-- All other data uses mock JSON
+## 🤝 Contributing
 
-## 🔮 Future Enhancements
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Ready for integration with:
-- MongoDB
-- Supabase
-- PostgreSQL
-- Real authentication
-- Payment processing
-- User reviews and ratings
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-MIT License - feel free to use for personal or commercial projects.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+**Logesh Kannan**
+
+- GitHub: [@logeshkannan19](https://github.com/logeshkannan19)
+- LinkedIn: [Logesh Kannan](https://linkedin.com/in/logeshkannan)
+- Twitter: [@logeshkannan](https://twitter.com/logeshkannan)
+
+## 🙏 Acknowledgments
+
+- [Unsplash](https://unsplash.com) for high-quality images
+- [shadcn/ui](https://ui.shadcn.com) for beautiful components
+- [Framer Motion](https://www.framer.com/motion/) for smooth animations
+- [Tailwind CSS](https://tailwindcss.com) for styling
 
 ---
 
-Built with ❤️ by [Your Name]
+Built with ❤️ and ☕ by **Logesh Kannan**
