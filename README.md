@@ -205,7 +205,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [shadcn/ui](https://ui.shadcn.com) for beautiful components
 - [Framer Motion](https://www.framer.com/motion/) for smooth animations
 - [Tailwind CSS](https://tailwindcss.com) for styling
-
----
-
-Built with ❤️
