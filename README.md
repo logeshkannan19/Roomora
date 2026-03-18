@@ -199,14 +199,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
-
-**Logesh Kannan**
-
-- GitHub: [@logeshkannan19](https://github.com/logeshkannan19)
-- LinkedIn: [Logesh Kannan](https://linkedin.com/in/logeshkannan)
-- Twitter: [@logeshkannan](https://twitter.com/logeshkannan)
-
 ## 🙏 Acknowledgments
 
 - [Unsplash](https://unsplash.com) for high-quality images
@@ -216,4 +208,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Built with ❤️ and ☕ by **Logesh Kannan**
+Built with ❤️

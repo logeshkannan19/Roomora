@@ -23,13 +23,6 @@ export const metadata: Metadata = {
     'premium rooms',
     'studio apartment',
   ],
-  authors: [
-    {
-      name: 'Logesh Kannan',
-      url: 'https://github.com/logeshkannan19',
-    },
-  ],
-  creator: 'Logesh Kannan',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -51,7 +44,6 @@ export const metadata: Metadata = {
     title: 'Roomora - Find Your Perfect Room',
     description: 'Discover premium rooms for rent across the UAE',
     images: ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200'],
-    creator: '@logeshkannan',
   },
   robots: {
     index: true,
